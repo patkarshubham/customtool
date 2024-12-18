@@ -1,563 +1,536 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Custom Tool Set</title>
-    <meta
-      content="width=device-width, initial-scale=1.0"
-      name="viewport" />
-    <meta
-      content="Free Website Template"
-      name="keywords" />
-    <meta
-      content="Free Website Template"
-      name="description" />
 
-    <!-- Favicon -->
-    <link
-      href="img/favicon.ico"
-      rel="icon" />
+<head>
+  <meta charset="utf-8" />
+  <title>Custom Tool Set</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="Free Website Template" name="keywords" />
+  <meta content="Free Website Template" name="description" />
 
-    <!-- Google Web Fonts -->
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com" />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet" />
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon" />
 
-    <!-- Icon Font Stylesheet -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet" />
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Libraries Stylesheet -->
-    <link
-      href="lib/owlcarousel/assets/owl.carousel.min.css"
-      rel="stylesheet" />
-    <link
-      href="lib/lightbox/css/lightbox.min.css"
-      rel="stylesheet" />
-    <link
-      href="lib/animate/animate.min.css"
-      rel="stylesheet" />
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link
-      href="css/bootstrap.min.css"
-      rel="stylesheet" />
+  <!-- Libraries Stylesheet -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
 
-    <!-- Template Stylesheet -->
-    <link
-      href="css/style.css"
-      rel="stylesheet" />
-    <style>
-      .portfolio-item {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-      .portfolio-item:hover {
-        transform: scale(1.05);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      }
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+  <style>
+    .portfolio-item {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-      .service-item {
-        display: block;
-        text-align: center;
-        padding: 20px;
-        border: 2px solid #357cff;
-        border-radius: 8px;
-        background-color: #314355;
-        transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      }
+    .portfolio-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
 
-      .service-item:hover {
-        background-color: #44586c;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      }
+    .service-item {
+      display: block;
+      text-align: center;
+      color: white;
+      padding: 20px;
+      border: 4px solid #357cff;
+      border-radius: 8px;
+      background-color: #314355;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
 
-      .service-item i {
-        color: #007bff;
-      }
+    .service-item:hover {
+      background-color: #44586c;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
 
-      .title {
-        font-weight: 700;
-        font-size: 28px;
-        text-align: center;
-        margin-bottom: 20px;
-      }
+    .service-item i {
+      color: #007bff;
+    }
 
-      #portfolio-filters li {
-        cursor: pointer;
-        margin: 5px;
-      }
-    </style>
-  </head>
+    .title {
+      font-weight: 700;
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-  <body>
-    <!-- Spinner Start -->
-    <div
-      id="spinner"
-      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-      <div
-        class="spinner-border text-primary"
-        style="width: 3rem; height: 3rem"
-        role="status">
-        <span class="sr-only">Loading...</span>
-      </div>
+    #portfolio-filters li {
+      cursor: pointer;
+      margin: 5px;
+    }
+    #searchBox {
+    max-width: 300px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  </style>
+</head>
+
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
+      <span class="sr-only">Loading...</span>
     </div>
-    <!-- Spinner End -->
+  </div>
+  <!-- Spinner End -->
 
-    <div class="container">
-      <div class="row g-5">
-        <div class="col-lg-4 sticky-lg-top vh-100">
-          <div
-            class="d-flex flex-column h-100 text-center overflow-auto shadow">
-            <img
-              class="w-100 img-fluid mb-4"
-              src="https://avatars.githubusercontent.com/u/52624483?v=4"
-              alt="Image" />
-            <h1 class="text-primary mt-2">Tool Set</h1>
-            <div
-              class="mb-4"
-              style="height: 22px">
-              <h4 class="typed-text-output d-inline-block text-light"></h4>
-              <div class="typed-text d-none">
-                Image, Design, SEO, Marketing, Other
-              </div>
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4 sticky-lg-top vh-100">
+        <div class="d-flex flex-column h-100 text-center overflow-auto shadow">
+          <img class="w-100 img-fluid mb-4" src="https://avatars.githubusercontent.com/u/52624483?v=4" alt="Image" />
+          <h1 class="text-primary mt-2">Tool Set</h1>
+          <div class="mb-4" style="height: 22px">
+            <h4 class="typed-text-output d-inline-block text-light"></h4>
+            <div class="typed-text d-none">
+              Image, Design, SEO, Marketing, Other
             </div>
           </div>
-        </div>
-        <div class="col-lg-8">
-          <!-- Services Start -->
-          <section class="py-5 border-bottom">
-            <h1 class="title pb-3 mb-5">Custom Tools</h1>
-            <div class="row">
-              <div class="col-12 text-center mb-2">
-                <ul
-                  class="list-inline mb-4"
-                  id="portfolio-filters">
-                  <li
-                    class="btn btn-secondary active"
-                    data-filter="*">
-                    <i class="fa fa-star me-2"></i>All
-                  </li>
-                  <li
-                    class="btn btn-secondary"
-                    data-filter=".seo">
-                    <i class="fa fa-search me-2"></i>SEO
-                  </li>
-                  <li
-                    class="btn btn-secondary"
-                    data-filter=".image">
-                    <i class="fa fa-image me-2"></i>Image
-                  </li>
-                  <li
-                    class="btn btn-secondary"
-                    data-filter=".design">
-                    <i class="fa fa-laptop-code me-2"></i>Design
-                  </li>
-                  <li
-                    class="btn btn-secondary"
-                    data-filter=".marketing">
-                    <i class="fa fa-chart-line me-2"></i>Marketing
-                  </li>
-                  <li
-                    class="btn btn-secondary"
-                    data-filter=".doc">
-                    <i class="fa fa-file-alt me-2"></i>Doc
-                  </li>
-                  <li
-                    class="btn btn-secondary"
-                    data-filter=".development">
-                    <i class="fa fa-code me-2"></i>Development
-                  </li>
-                  <li
-                    class="btn btn-secondary"
-                    data-filter=".branding">
-                    <i class="fa fa-lightbulb me-2"></i>Branding
-                  </li>
-                  <li
-                    class="btn btn-secondary"
-                    data-filter=".uiux">
-                    <i class="fa fa-paint-brush me-2"></i>UI/UX
-                  </li>
-                  <li
-                    class="btn btn-secondary"
-                    data-filter=".backend">
-                    <i class="fa fa-server me-2"></i>Backend
-                  </li>
-                  <li
-                    class="btn btn-secondary"
-                    data-filter=".aitool">
-                    <i class="fa fas fa-robot me-2"></i>AI Tool
-                  </li>
-                  <li
-                    class="btn btn-secondary"
-                    data-filter=".video">
-                    <i class="fa fas fas fas fa-video me-2"></i>Video
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div
-              class="row g-4 portfolio-container"
-              id="portfolio-container">
-              <!-- Cards will be dynamically generated here -->
-            </div>
-          </section>
-          <!-- Services End -->
-        </div>
-      </div>
+            <!-- Search Box -->
+    <div class="col-12 text-center mb-4">
+      <input type="text" id="searchBox" class="form-control" placeholder="Search Tools..." />
     </div>
 
-    <!-- Back to Top -->
-    <a
-      href="#"
-      class="back-to-top"
-      ><i class="fa fa-angle-double-up"></i
-    ></a>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <!-- Services Start -->
+        <section class="py-5 border-bottom">
+          <h1 class="title pb-3 mb-5">Custom Tools</h1>
+          <div class="row">
+            <div class="col-12 text-center mb-2">
+              <ul class="list-inline mb-4" id="portfolio-filters">
+                <li class="btn btn-secondary active" data-filter="*">
+                  <i class="fa fa-star me-2"></i>All
+                </li>
+                <li class="btn btn-secondary" data-filter=".seo">
+                  <i class="fa fa-search me-2"></i>SEO
+                </li>
+                <li class="btn btn-secondary" data-filter=".image">
+                  <i class="fa fa-image me-2"></i>Image
+                </li>
+                <li class="btn btn-secondary" data-filter=".design">
+                  <i class="fa fa-laptop-code me-2"></i>Design
+                </li>
+                <li class="btn btn-secondary" data-filter=".marketing">
+                  <i class="fa fa-chart-line me-2"></i>Marketing
+                </li>
+                <li class="btn btn-secondary" data-filter=".doc">
+                  <i class="fa fa-file-alt me-2"></i>Doc
+                </li>
+                <li class="btn btn-secondary" data-filter=".development">
+                  <i class="fa fa-code me-2"></i>Development
+                </li>
+                <li class="btn btn-secondary" data-filter=".branding">
+                  <i class="fa fa-lightbulb me-2"></i>Branding
+                </li>
+                <li class="btn btn-secondary" data-filter=".uiux">
+                  <i class="fa fa-paint-brush me-2"></i>UI/UX
+                </li>
+                <li class="btn btn-secondary" data-filter=".backend">
+                  <i class="fa fa-server me-2"></i>Backend
+                </li>
+                <li class="btn btn-secondary" data-filter=".aitool">
+                  <i class="fa fas fa-robot me-2"></i>AI Tool
+                </li>
+                <li class="btn btn-secondary" data-filter=".video">
+                  <i class="fa fas fas fas fa-video me-2"></i>Video
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row g-4 portfolio-container" id="portfolio-container">
+            <!-- Cards will be dynamically generated here -->
+          </div>
+        </section>
+        <!-- Services End -->
+      </div>
+    </div>
+  </div>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/typed/typed.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/typed/typed.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-    <!-- Your HTML remains the same -->
-    <!-- Include jQuery (before your custom script) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Contact Javascript File -->
+  <script src="mail/jqBootstrapValidation.min.js"></script>
+  <script src="mail/contact.js"></script>
 
-    <!-- Include Isotope (before your custom script) -->
-    <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+  <!-- Your HTML remains the same -->
+  <!-- Include jQuery (before your custom script) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <script>
-      // Card data template
-      const tools = [
-        {
-          category: "image",
-          icon: "https://static.canva.com/web/images/856bac30504ecac8dbd38dbee61de1f1.svg",
-          title: "Canva",
-          description: "Image Tool",
-          link: "https://www.canva.com/",
-        },
-        {
-          category: "image",
-          icon: "https://ideogram.ai/assets/progressive-image/balanced/response/hl7IG0laT_iMGP5kqbYm5g",
-          title: "Ideogram.ai",
-          description: "AI Image",
-          link: "https://ideogram.ai/",
-        },
-        {
-          category: "image",
-          icon: "https://vecta.io/nano/images/nano-logo-text.7ac1165dbf.svg",
-          title: "vecta.io",
-          description: "Image compressor",
-          link: "https://vecta.io/nano",
-        },
-        {
-          category: "image",
-          icon: "data:image/png;base64,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",
-          title: "Compressor.io",
-          description: "compressor Tool",
-          link: "https://compressor.io/",
-        },
-        {
-          category: "image",
-          icon: "https://cdn3.pixelcut.app/web/assets/home-page/editor-1.webp",
-          title: "pixelcut",
-          description: "BG Remo, Upscaler, Eraser",
-          link: "https://www.pixelcut.ai/",
-        },
-        {
-          category: "image",
-          icon: "data:image/png;base64,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",
-          title: "boxy-svg",
-          description: "svg edit",
-          link: "https://boxy-svg.com/",
-        },
-        {
-          category: "image",
-          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Meta_AI_logo.png/800px-Meta_AI_logo.png",
-          title: "meta.ai",
-          description: "Image Tool",
-          link: "https://www.meta.ai/",
-        },
-        {
-          category: "image",
-          icon: "https://avatars.githubusercontent.com/u/52624483?v=4",
-          title: "imagecompressr",
-          description: "Bulk Image",
-          link: "https://imagecompressr.com/",
-        },
-        {
-          category: "seo",
-          icon: "https://avatars.githubusercontent.com/u/52624483?v=4",
-          title: "learningseo",
-          description: "learningseo web",
-          link: "https://learningseo.io/",
-        },
-        {
-          category: "design",
-          icon: "fa-edit",
-          title: "Graphic Design",
-          description: "Design Tool",
-          link: "design-tool.html",
-        },
-        {
-          category: "marketing",
-          icon: "fa-chart-line",
-          title: "Marketing",
-          description: "Marketing Tool",
-          link: "marketing-tool.html",
-        },
-        {
-          category: "marketing",
-          icon: "fa-chart-line",
-          title: "Marketing",
-          description: "Marketing Tool",
-          link: "marketing-tool.html",
-        },
-        {
-          category: "marketing",
-          icon: "https://docrdsfx76ssb.cloudfront.net/static/1734022383/pages/wp-content/uploads/2022/08/Bitly_Press-Momentum_Social-Sharing_Orange.png",
-          title: "bitly",
-          description: "url shortener",
-          link: "https://app.bitly.com/Bnc88QKGRKc/home",
-        },
-        {
-          category: "doc",
-          icon: "fa-file-alt",
-          title: "Document Management",
-          description: "Doc Tool",
-          link: "doc-tool.html",
-        },
-        {
-          category: "development",
-          icon: "https://avatars.githubusercontent.com/u/52624483?v=4",
-          title: "timestamp-converter",
-          description: "timestamp converter",
-          link: "https://www.timestamp-converter.com/",
-        },
-        {
-          category: "development",
-          icon: "https://raw.githubusercontent.com/react-icons/react-icons/master/react-icons.svg",
-          title: "React icons",
-          description: "react-icons",
-          link: "https://react-icons.github.io/react-icons/",
-        },
-        {
-          category: "branding",
-          icon: "data:image/jpeg;base64,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",
-          title: "Express Adobe",
-          description: "Editing",
-          link: "https://new.express.adobe.com/",
-        },
-        {
-          category: "branding",
-          icon: "https://topmate.io/_next/image?url=%2Fimages%2Fcommon%2Ftopmate-light.svg&w=640&q=75&dpl=dpl_CG3w9LmsSBdjHC65wqMaqdgq33r7",
-          title: "topmate.io",
-          description: "create profile",
-          link: "https://topmate.io/",
-        },
-        {
-          category: "branding",
-          icon: "fa-lightbulb",
-          title: "Branding",
-          description: "Branding Tool",
-          link: "https://new.express.adobe.com/",
-        },
-        {
-          category: "branding",
-          icon: "fa-lightbulb",
-          title: "Branding",
-          description: "Branding Tool",
-          link: "https://new.express.adobe.com/",
-        },
-        {
-          category: "uiux",
-          icon: "https://storybook.nextui.org/dark-logo.svg",
-          title: "Next UI",
-          description: "UI/UX Tool",
-          link: "https://storybook.nextui.org/",
-        },
-        {
-          category: "uiux",
-          icon: "fa-paint-brush",
-          title: "UI/UX",
-          description: "UI/UX Tool",
-          link: "uiux-tool.html",
-        },
-        {
-          category: "uiux",
-          icon: "fa-paint-brush",
-          title: "UI/UX",
-          description: "UI/UX Tool",
-          link: "uiux-tool.html",
-        },
-        {
-          category: "uiux",
-          icon: "fa-paint-brush",
-          title: "UI/UX",
-          description: "UI/UX Tool",
-          link: "uiux-tool.html",
-        },
-        {
-          category: "backend",
-          icon: "fa-server",
-          title: "Backend Dev",
-          description: "Backend Dev Tool",
-          link: "backend-dev-tool.html",
-        },
-        {
-          category: "aitool",
-          icon: "https://aihumanize.io/assets/img/logo1.png",
-          title: "aihumanize.io",
-          description: "text human",
-          link: "https://aihumanize.io/",
-        },
-        {
-          category: "aitool",
-          icon: "https://www.humanizeai.io/images/logo/humanizeai_logo.png",
-          title: "humanizeai.io",
-          description: "text human",
-          link: "https://www.humanizeai.io/",
-        },
-        {
-          category: "aitool",
-          icon: "https://humanizeaitext.ai/_next/image?url=%2Fassets%2FhumanizeAiLogo.svg&w=640&q=75",
-          title: "humanizeaitext",
-          description: "text human",
-          link: "https://humanizeaitext.ai/",
-        },
-        {
-          category: "aitool",
-          icon: "https://d1q5p2nadm4152.cloudfront.net/public/images/logo/logo-writesonic.svg",
-          title: "writesonic",
-          description: "text human",
-          link: "https://writesonic.com/free-tools/text-humanizer",
-        },
-        {
-          category: "aitool",
-          icon: "https://hix.ai/cdn/public/images/index/desktopgpt.png",
-          title: "bypass.hix.ai",
-          description: "text human",
-          link: "https://bypass.hix.ai/hub/writehuman-review",
-        },
-        {
-          category: "aitool",
-          icon: "https://hix.ai/cdn/public/images/index/desktopgpt.png",
-          title: "humanizeai",
-          description: "text human",
-          link: "https://www.humanizeai.pro/",
-        },
-        {
-          category: "aitool",
-          icon: "https://www.ryrob.com/wp-content/uploads/2023/05/ryrob-logo-mini.svg",
-          title: "ryrob",
-          description: "Tool Set",
-          link: "https://www.ryrob.com/tools/",
-        },
-        {
-          category: "aitool",
-          icon: "https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg",
-          title: "gemini",
-          description: "gpt",
-          link: "https://gemini.google.com/",
-        },
-        {
-          category: "aitool",
-          icon: "data:image/png;base64,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",
-          title: "perplexity",
-          description: "GPT",
-          link: "https://www.perplexity.ai/",
-        },
-        {
-          category: "aitool",
-          icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtUnGYPe67wuzVDjTujZ21UV38Y6KQ290fow&s",
-          title: "claude.ai",
-          description: "GPT",
-          link: "https://claude.ai/new",
-        },
-        {
-          category: "aitool",
-          icon: "https://agent.ai/agent.ai-gear/1.png",
-          title: "agent.ai",
-          description: "Agents",
-          link: "https://agent.ai/",
-        },
-        {
-          category: "video",
-          icon: "https://ttsmaker.com/static/v3_theme_01_asset/logo/expert_logo_v2.png",
-          title: "ttsmaker",
-          description: "Text to Speech",
-          link: "https://ttsmaker.com/",
-        },
-      ];
+  <!-- Include Isotope (before your custom script) -->
+  <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
 
+  <script>
+     $(document).ready(function () {
+      // Initialize Isotope
+      const $portfolioContainer = $('#portfolio-container').isotope({
+        itemSelector: '.portfolio-item',
+        layoutMode: 'fitRows',
+      });
+
+      // Filter items based on the selected category
+      $('#portfolio-filters li').on('click', function () {
+        // Remove active class from all filter buttons
+        $('#portfolio-filters li').removeClass('active');
+        // Add active class to the clicked button
+        $(this).addClass('active');
+
+        // Get the filter category from the data-filter attribute
+        const filterValue = $(this).attr('data-filter');
+        // Apply the filter to the Isotope container
+        $portfolioContainer.isotope({ filter: filterValue });
+      });
+      });
+
+    // Card data template
+    const tools = [{
+        category: "image",
+        icon: "https://static.canva.com/web/images/856bac30504ecac8dbd38dbee61de1f1.svg",
+        title: "Canva",
+        description: "Image Tool",
+        link: "https://www.canva.com/",
+      },
+      {
+        category: "image",
+        icon: "https://ideogram.ai/assets/progressive-image/balanced/response/hl7IG0laT_iMGP5kqbYm5g",
+        title: "Ideogram.ai",
+        description: "AI Image",
+        link: "https://ideogram.ai/",
+      },
+      {
+        category: "image",
+        icon: "https://vecta.io/nano/images/nano-logo-text.7ac1165dbf.svg",
+        title: "vecta.io",
+        description: "Image compressor",
+        link: "https://vecta.io/nano",
+      },
+      {
+        category: "image",
+        icon: "data:image/png;base64,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",
+        title: "Compressor.io",
+        description: "compressor Tool",
+        link: "https://compressor.io/",
+      },
+      {
+        category: "image",
+        icon: "https://cdn3.pixelcut.app/web/assets/home-page/editor-1.webp",
+        title: "pixelcut",
+        description: "BG Remo, Upscaler, Eraser",
+        link: "https://www.pixelcut.ai/",
+      },
+      {
+        category: "image",
+        icon: "https://avatars.githubusercontent.com/u/52624483?v=4",
+         title: "boxy-svg",
+        description: "svg edit",
+        link: "https://boxy-svg.com/",
+      },
+      {
+        category: "image",
+        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Meta_AI_logo.png/800px-Meta_AI_logo.png",
+        title: "meta.ai",
+        description: "Image Tool",
+        link: "https://www.meta.ai/",
+      },
+      {
+        category: "image",
+        icon: "https://avatars.githubusercontent.com/u/52624483?v=4",
+        title: "imagecompressr",
+        description: "Bulk Image",
+        link: "https://imagecompressr.com/",
+      },
+      {
+        category: "seo",
+        icon: "https://avatars.githubusercontent.com/u/52624483?v=4",
+        title: "learningseo",
+        description: "learningseo web",
+        link: "https://learningseo.io/",
+      },
+      {
+        category: "design",
+        icon: "fa-edit",
+        title: "Graphic Design",
+        description: "Design Tool",
+        link: "design-tool.html",
+      },
+      {
+        category: "marketing",
+        icon: "fa-chart-line",
+        title: "Marketing",
+        description: "Marketing Tool",
+        link: "marketing-tool.html",
+      },
+      {
+        category: "marketing",
+        icon: "fa-chart-line",
+        title: "Marketing",
+        description: "Marketing Tool",
+        link: "marketing-tool.html",
+      },
+      {
+        category: "marketing",
+        icon: "https://avatars.githubusercontent.com/u/52624483?v=4",
+         title: "bitly",
+        description: "url shortener",
+        link: "https://app.bitly.com/Bnc88QKGRKc/home",
+      },
+      {
+        category: "doc",
+        icon: "fa-file-alt",
+        title: "Document Management",
+        description: "Doc Tool",
+        link: "doc-tool.html",
+      },
+      {
+        category: "development",
+        icon: "https://avatars.githubusercontent.com/u/52624483?v=4",
+        title: "timestamp-converter",
+        description: "timestamp converter",
+        link: "https://www.timestamp-converter.com/",
+      },
+      {
+        category: "development",
+        icon: "https://raw.githubusercontent.com/react-icons/react-icons/master/react-icons.svg",
+        title: "React icons",
+        description: "react-icons",
+        link: "https://react-icons.github.io/react-icons/",
+      },
+      {
+        category: "branding",
+        icon: "https://avatars.githubusercontent.com/u/52624483?v=4",
+         title: "Express Adobe",
+        description: "Editing",
+        link: "https://new.express.adobe.com/",
+      },
+      {
+        category: "branding",
+        icon: "https://avatars.githubusercontent.com/u/52624483?v=4",
+         title: "topmate.io",
+        description: "create profile",
+        link: "https://topmate.io/",
+      },
+      {
+        category: "branding",
+        icon: "fa-lightbulb",
+        title: "Branding",
+        description: "Branding Tool",
+        link: "https://new.express.adobe.com/",
+      },
+      {
+        category: "branding",
+        icon: "fa-lightbulb",
+        title: "Branding",
+        description: "Branding Tool",
+        link: "https://new.express.adobe.com/",
+      },
+      {
+        category: "uiux",
+        icon: "https://storybook.nextui.org/dark-logo.svg",
+        title: "Next UI",
+        description: "UI/UX Tool",
+        link: "https://storybook.nextui.org/",
+      },
+      {
+        category: "uiux",
+        icon: "fa-paint-brush",
+        title: "UI/UX",
+        description: "UI/UX Tool",
+        link: "uiux-tool.html",
+      },
+      {
+        category: "uiux",
+        icon: "fa-paint-brush",
+        title: "UI/UX",
+        description: "UI/UX Tool",
+        link: "uiux-tool.html",
+      },
+      {
+        category: "uiux",
+        icon: "fa-paint-brush",
+        title: "UI/UX",
+        description: "UI/UX Tool",
+        link: "uiux-tool.html",
+      },
+      {
+        category: "backend",
+        icon: "fa-server",
+        title: "Backend Dev",
+        description: "Backend Dev Tool",
+        link: "backend-dev-tool.html",
+      },
+      {
+        category: "aitool",
+        icon: "https://aihumanize.io/assets/img/logo1.png",
+        title: "aihumanize.io",
+        description: "text human",
+        link: "https://aihumanize.io/",
+      },
+      {
+        category: "aitool",
+        icon: "https://www.humanizeai.io/images/logo/humanizeai_logo.png",
+        title: "humanizeai.io",
+        description: "text human",
+        link: "https://www.humanizeai.io/",
+      },
+      {
+        category: "aitool",
+        icon: "https://humanizeaitext.ai/_next/image?url=%2Fassets%2FhumanizeAiLogo.svg&w=640&q=75",
+        title: "humanizeaitext",
+        description: "text human",
+        link: "https://humanizeaitext.ai/",
+      },
+      {
+        category: "aitool",
+        icon: "https://d1q5p2nadm4152.cloudfront.net/public/images/logo/logo-writesonic.svg",
+        title: "writesonic",
+        description: "text human",
+        link: "https://writesonic.com/free-tools/text-humanizer",
+      },
+      {
+        category: "aitool",
+        icon: "https://hix.ai/cdn/public/images/index/desktopgpt.png",
+        title: "bypass.hix.ai",
+        description: "text human",
+        link: "https://bypass.hix.ai/hub/writehuman-review",
+      },
+      {
+        category: "aitool",
+        icon: "https://hix.ai/cdn/public/images/index/desktopgpt.png",
+        title: "humanizeai",
+        description: "text human",
+        link: "https://www.humanizeai.pro/",
+      },
+      {
+        category: "aitool",
+        icon: "https://www.ryrob.com/wp-content/uploads/2023/05/ryrob-logo-mini.svg",
+        title: "ryrob",
+        description: "Tool Set",
+        link: "https://www.ryrob.com/tools/",
+      },
+      {
+        category: "aitool",
+        icon: "https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg",
+        title: "gemini",
+        description: "gpt",
+        link: "https://gemini.google.com/",
+      },
+      {
+        category: "aitool",
+        icon: "https://avatars.githubusercontent.com/u/52624483?v=4",
+         title: "perplexity",
+        description: "GPT",
+        link: "https://www.perplexity.ai/",
+      },
+      {
+        category: "aitool",
+        icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtUnGYPe67wuzVDjTujZ21UV38Y6KQ290fow&s",
+        title: "claude.ai",
+        description: "GPT",
+        link: "https://claude.ai/new",
+      },
+      {
+        category: "aitool",
+        icon: "https://agent.ai/agent.ai-gear/1.png",
+        title: "agent.ai",
+        description: "Agents",
+        link: "https://agent.ai/",
+      },
+      {
+        category: "video",
+        icon: "https://ttsmaker.com/static/v3_theme_01_asset/logo/expert_logo_v2.png",
+        title: "ttsmaker",
+        description: "Text to Speech",
+        link: "https://ttsmaker.com/",
+      },
+    ];
+ // Function to generate the tool cards dynamically
+ function generateCards() {
       const container = document.getElementById("portfolio-container");
+      container.innerHTML = ""; // Clear the container first
 
       tools.forEach((tool) => {
         const card = document.createElement("div");
-        card.className = `col-lg-3 col-md-6 portfolio-item ${tool.category}`;
+        card.classList.add("col-lg-3", "col-md-6", "col-sm-12", "portfolio-item", tool.category);
 
-        // Insert the icon image as an <img> tag
         card.innerHTML = `
-    <a href="${tool.link}" target="_blank" class="service-item">
-      <img src="${tool.icon}" alt="${tool.title} Icon" width="50" height="50"  class="mx-auto mb-4" />
-      <h5 class="mb-2">${tool.title}</h5>
-      <p class="mb-0">${tool.description}</p>
-    </a>
-  `;
+          <div class="service-item">
+            <a href="${tool.link}" target="_blank">
+              <img src="${tool.icon}" alt="${tool.title}" width="50" height="40" class="img-fluid mb-3"  />
+              <h5 style="color: white;">${tool.title}</h5>
 
+              <p>${tool.description}</p>
+            </a>
+          </div>
+        `;
         container.appendChild(card);
       });
+    }
 
-      // Ensure that Isotope is initialized after cards are added
-      $(document).ready(function () {
-        // Initialize Isotope only after the DOM is ready
-        var $portfolioContainer = $(".portfolio-container");
+    // Event listener for search functionality
+    document.getElementById("searchBox").addEventListener("input", function () {
+      const query = this.value.toLowerCase();
+      const filteredTools = tools.filter((tool) =>
+        tool.title.toLowerCase().includes(query)
+      );
 
-        // Make sure to initialize isotope correctly
-        $portfolioContainer.isotope({
-          itemSelector: ".portfolio-item", // Selector for portfolio items
-          layoutMode: "fitRows", // Fit rows layout
-        });
+      // Update the displayed tools based on the search query
+      const container = document.getElementById("portfolio-container");
+      container.innerHTML = "";
+      filteredTools.forEach((tool) => {
+        const card = document.createElement("div");
+        card.classList.add("col-lg-3", "col-md-6", "col-sm-12", "portfolio-item", tool.category);
 
-        // Filter functionality for buttons
-        $("#portfolio-filters li").on("click", function () {
-          // Toggle active class
-          $("#portfolio-filters li").removeClass("active");
-          $(this).addClass("active");
+        card.innerHTML = `
+          <div class="service-item">
+            <a href="${tool.link}" target="_blank">
+              <img src="${tool.icon}" alt="${tool.title}" width="50" height="40" class="img-fluid mb-3" />
+              <h5 style="color: white;">${tool.title}</h5>
 
-          // Get the filter value
-          var filterValue = $(this).attr("data-filter");
-
-          // Apply filter using Isotope
-          $portfolioContainer.isotope({
-            filter: filterValue, // Filter portfolio items
-          });
-        });
+              <p>${tool.description}</p>
+            </a>
+          </div>
+        `;
+        container.appendChild(card);
       });
-    </script>
-  </body>
+    });
+
+    // Generate initial cards
+    generateCards();
+  </script>
+</body>
+
 </html>
