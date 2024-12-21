@@ -1,0 +1,303 @@
+/********** Template CSS **********/
+:root {
+  --primary: #357cff;
+  --secondary: #314355;
+  --light: #f2f2f2;
+  --dark: #2c3e50;
+}
+
+#spinner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+  z-index: 99999;
+}
+
+#spinner.show {
+  transition: opacity 0.5s ease-out, visibility 0s linear 0s;
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 991.98px) {
+  .sticky-lg-top.vh-100 {
+    height: 100% !important;
+  }
+}
+
+.fw-semi-bold {
+  font-weight: 600;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+.btn-square {
+  width: 40px;
+  height: 40px;
+}
+
+.btn-sm-square {
+  width: 30px;
+  height: 30px;
+}
+
+.btn-lg-square {
+  width: 50px;
+  height: 50px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn.btn-primary {
+  color: #ffffff;
+}
+
+.typed-cursor {
+  font-size: 25px;
+  color: var(--light);
+}
+
+.back-to-top {
+  position: fixed;
+  display: none;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 1;
+  font-size: 30px;
+  right: 30px;
+  bottom: 30px;
+  transition: background 0.5s;
+  z-index: 11;
+}
+
+.back-to-top i {
+  color: var(--primary);
+}
+
+.back-to-top i:hover {
+  color: var(--dark);
+}
+
+.back-to-top {
+  -webkit-animation: action 1s infinite alternate;
+  animation: action 1s infinite alternate;
+}
+
+@-webkit-keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+.title {
+  position: relative;
+}
+
+.title::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  bottom: -4px;
+  left: 0;
+  border: 2px solid var(--light);
+  border-radius: 10px;
+}
+
+.title::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 2px;
+  bottom: 0;
+  left: 15px;
+  border-radius: 2px;
+  background: var(--light);
+}
+
+.progress {
+  height: 5px;
+}
+
+.progress .progress-bar {
+  width: 0px;
+  transition: 2s;
+}
+
+.service-item {
+  width: 250px;  /* Fixed width */
+  height: 150px; /* Fixed height */
+  padding: 10px;
+  text-align: center;
+  background: var(--secondary);
+  display: block;
+  color: white;
+  border: 4px solid #357cff;
+  border-radius: 8px;
+  background-color: #314355;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;  /* Ensures padding is included in the width/height */
+}
+
+.service-item i {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light);
+  color: var(--light);
+  transition: 0.5s;
+  color: #007bff;
+  margin: 0 auto;  /* Centers the icon inside the service item */
+}
+
+
+.service-item:hover i {
+  background: var(--primary);
+  color: var(--light);
+  background-color: #44586c;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item .portfolio-btn {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  font-size: 90px;
+  background: rgba(44, 62, 80, 0.9);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.portfolio-item:hover .portfolio-btn {
+  opacity: 1;
+  width: calc(100% - 60px);
+  height: calc(100% - 60px);
+  top: 30px;
+  left: 30px;
+}
+
+.portfolio-item i {
+  opacity: 0;
+  transition: 0.3s;
+  transition-delay: 0.3s;
+}
+
+.portfolio-item:hover i {
+  opacity: 1;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+#portfolio-filters li {
+  cursor: pointer;
+  margin: 5px;
+}
+#searchBox {
+max-width: 600px;
+margin-bottom: 20px;
+color: #314355;
+padding: 10px;
+font-size: 16px;
+border-radius: 5px;
+border: 1px solid #ccc;
+}
+
+.fixed-size-image {
+  width: 50px;    /* Fixed width */
+  height: 40px;   /* Fixed height */
+  object-fit: cover;  /* Ensures the image fills the container while maintaining aspect ratio */
+}
+
+.rounded-circle {
+  margin-top: 40px;
+  color: #007bff;
+  width: 200px;    /* Fixed width */
+  height: 170px;   /* Fixed height, equal to width to form a circle */
+  object-fit: cover;  /* Ensures the image fills the container while maintaining aspect ratio */
+  border-radius: 50%;  /* Makes the image fully rounded */
+}
+
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-item {
+  display: block;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  border: 4px solid #357cff;
+  border-radius: 8px;
+  background-color: #314355;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  background-color: #44586c;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-item i {
+  color: #007bff;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#portfolio-filters li {
+  cursor: pointer;
+  margin: 5px;
+}
+#searchBox {
+max-width: 300px;
+margin-bottom: 20px;
+color: #314355;
+padding: 10px;
+font-size: 16px;
+border-radius: 5px;
+border: 1px solid #ccc;
+}
